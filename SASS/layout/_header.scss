@@ -1,0 +1,96 @@
+.header-page.contact-header-img {
+  background-image: url("../IMAGE/HEADER-PAGE.jpg") !important;
+}
+.header-page.services-header-img {
+  background-image: url("../IMAGE/services.jpg") !important;
+}
+.header-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70vh !important;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  margin-top: -7px;
+  .overlay-header {
+    @include layout(#2f2f2f);
+    opacity: 0.45;
+  }
+  .header-content {
+    @include centerPosition;
+    text-align: center;
+    z-index: 1;
+    h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 35px;
+      letter-spacing: 2px;
+    }
+    p {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      a {
+        color: #fff;
+        transition: all 0.3s ease;
+        &:hover {
+          color: var(--mainColor);
+        }
+      }
+      i {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.main-header-page {
+  background-image: url("../IMAGE/doctors.jpg") !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh !important;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  margin-top: -7px;
+  .overlay-header {
+    @include layout(#282828);
+    opacity: 0.45;
+  }
+  .header-content {
+    position: absolute;
+    height: 100% !important;
+    z-index: 5;
+    .header-text {
+      height: 100% !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      h1 {
+        color: var(--mainColor);
+        text-transform: capitalize;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.666);
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+      .btn-main-header {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .header-page .header-content > :is(h2, p) {
+    font-size: 7vw;
+  }
+}

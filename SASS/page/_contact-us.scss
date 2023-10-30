@@ -1,0 +1,175 @@
+.contact-us {
+  padding: 4% 0;
+  .container {
+    .header-contact {
+      font-size: 2.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      span {
+        font-weight: 800;
+        color: var(--mainColor);
+      }
+    }
+    .prag-contact {
+      text-align: center;
+      color: #666;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  }
+  .contact-content {
+    margin-top: 17px;
+    textarea,
+    input {
+      font-size: 1.05rem;
+      padding: 10px;
+      padding-left: 2rem;
+      margin: 2rem 1rem 0 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      outline: none;
+      box-shadow: 0.35px 0.65px 2px var(--boxShadow);
+      transition: all 0.3s ease;
+      &:focus {
+        box-shadow: none;
+        border: 1px solid var(--mainColor);
+      }
+      &:focus::placeholder {
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    }
+    input {
+      display: inline-block;
+      width: 42%;
+    }
+    textarea {
+      width: 86%;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 10px 15px;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      font-family: var(--fontFamily);
+    }
+  }
+  .contact-info {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 21px 0;
+  }
+  .contact-items {
+    display: flex;
+    margin-bottom: 2.5rem;
+    .icon {
+      font-size: 14px;
+      border-radius: 50%;
+      border: 1.9px dotted var(--fontColor);
+      text-align: center;
+      @include centerContent;
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+      i {
+        color: var(--fontColor);
+      }
+    }
+    .contact-text {
+      h4 {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.2rem;
+        color: var(--fontColor);
+        a {
+          color: var(--fontColor);
+        }
+      }
+    }
+  }
+  .reviews {
+    margin-top: 50px;
+    header {
+      padding: 10px 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      width: fit-content;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: var(--fontColor);
+    }
+    .reviews-content {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        label {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: var(--fontColor);
+        }
+        textarea {
+          margin-bottom: 20px;
+          font-size: 1.05rem;
+          padding: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 3px;
+          outline: none;
+          box-shadow: 0.35px 0.65px 2px rgba(102, 102, 102, 0.12);
+          transition: all 0.3s ease;
+          &:focus {
+            box-shadow: none;
+            border: 1px solid var(--mainColor);
+          }
+          &:focus::placeholder {
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+        }
+        .submit-review {
+          width: fit-content;
+          padding: 10px 25px;
+          border-radius: 5px;
+          border: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.google-map {
+  iframe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 999px) {
+  .contact-us {
+    .contact-content {
+      input,
+      textarea {
+        display: block;
+        width: 86%;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  .contact-us {
+    .contact-content {
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}

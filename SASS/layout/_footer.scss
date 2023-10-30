@@ -1,0 +1,53 @@
+footer {
+    background-color: #333;
+    color: rgba(255, 255, 255, 0.799);
+    padding: 3% 0;
+    header {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+    .about-us-parg {
+        color: rgba(255, 255, 255, 0.544);
+    }
+    .footer-contact,
+    .footer-location{
+        div {
+            margin: 15px 0;
+            color: rgba(255, 255, 255, 0.544);
+            text-transform: capitalize;
+            font-size: 18px;
+            span {
+                text-transform: none;
+            }
+        }
+        .links-media {
+            i {
+                margin: 0 15px;
+            }
+        }
+    }
+    .link-web {
+        margin: 10px 0;
+        a {
+            color: rgba(255, 255, 255, 0.544);
+            text-transform: capitalize;
+            &:hover {
+                color: #fff;
+                i {
+                    transform: translatex(100%);
+                }
+            }
+            i {
+                margin-right: 15px;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    .footer-location {
+        i {
+            margin-right: 10px;
+        }
+    }
+}

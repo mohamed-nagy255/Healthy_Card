@@ -1,0 +1,28 @@
+@import "./page/globalStyle";
+@import "./helpers/variable";
+@import "./helpers/mixins";
+@import "./helpers/functions";
+@import "./helpers/responsive";
+
+@import "./layout/perload";
+@import "./layout/navbar";
+@import "./layout/header";
+@import "./component/buttons";
+@import "./page/homepage";
+@import "./page/contact-us";
+@import "./page/login";
+
+@import "./page/services1";
+@import "./layout/form";
+@import "./layout/rating";
+@import "./layout/switchColor";
+@import "./layout/footer";
+@import "./layout/counterUp";
+@import "./layout/why-choose-us";
+@import "./page/about-us";
+@import "./page/profile";
+@import "./component/checkbox";
+@import "./layout/popup";
+@import "./component/full-input-ser";
+@import "./component/tables";
+@import "./layout/select";

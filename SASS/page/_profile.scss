@@ -1,0 +1,270 @@
+.profile {
+  margin: 3% 0;
+  .container {
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 7px;
+    .links-profile {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 25px 0;
+      border-right: 2px dotted #ccc;
+      height: 95%;
+      a {
+        margin-bottom: 20px;
+        color: #000;
+        font-family: apis;
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-size: 18px;
+        &:hover {
+          color: var(--mainColor);
+        }
+        i {
+          opacity: 0;
+        }
+      }
+      a.active {
+        color: var(--mainColor);
+        i {
+          opacity: 1;
+        }
+      }
+      .btn.change-password {
+        text-transform: uppercase;
+        box-shadow: none;
+      }
+    }
+    .profile-data {
+      .title {
+        font-family: apis;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: capitalize;
+        position: relative;
+        padding: 5px 0 5px 10px;
+        border-bottom: 1px solid var(--boxShadow);
+        display: block;
+        width: 100%;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -8px;
+          transform: translateY(-50%);
+          width: 4px;
+          height: 25px;
+          background-color: var(--mainColor);
+        }
+      }
+
+      .user-info {
+        padding: 3% 0;
+        .main-data {
+          margin-bottom: 30px;
+          .img-user {
+            text-align: center;
+            margin-top: 10px;
+            img {
+              padding: 3px;
+              width: 200px;
+              height: 200px;
+              border: 2px solid var(--mainColor);
+              border-radius: 50%;
+            }
+            .user-name {
+              font-size: 25px;
+              color: #777;
+              margin-top: 5px;
+              font-weight: 600;
+            }
+          }
+          .qr {
+            text-align: center;
+            margin-top: 10px;
+            img {
+              width: 250px;
+              height: 250px;
+            }
+          }
+        }
+        .user-data,
+        .patient-pathological-data {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 10px;
+          .data {
+            width: 49%;
+            margin: 10px auto;
+            text-transform: capitalize;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 5px;
+            .name-property {
+              color: var(--mainColor);
+              font-family: apis;
+              font-weight: 600;
+              font-size: 18px;
+            }
+            .value {
+              margin: auto;
+              font-size: 17px;
+              font-weight: 500;
+            }
+          }
+        }
+        .medicines {
+          margin: 10px 0;
+          width: 100%;
+          .table-medicines {
+            width: 100%;
+            max-height: 500px;
+            overflow: auto;
+            .table.medicines {
+              text-align: center;
+              width: 820px;
+              th {
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+        .patient-pathological-data {
+          .data {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            .value {
+              margin: 0;
+            }
+          }
+        }
+        .submit {
+          text-align: right;
+          display: block;
+          width: 100%;
+          margin-top: 20px;
+          .btn.submit-edit {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+    .edit-profile {
+      .main-parg {
+        color: #777;
+        text-transform: capitalize;
+        margin-top: 10px;
+      }
+      .main-data {
+        .img-user {
+          img {
+            overflow: hidden;
+          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          #file {
+            margin-top: 10px;
+            width: 160px;
+            height: 35px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 5px;
+            &::before {
+              content: "Upload Profile Photo";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: var(--mainColor);
+              color: #fff;
+              z-index: 10;
+              cursor: pointer;
+              text-align: center;
+              padding: 5px;
+            }
+          }
+        }
+      }
+      .full-input {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        label {
+          color: Var(--mainColor);
+          font-family: apis;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        input {
+          width: 100%;
+          border: 1.5px solid #aaa;
+          padding: 5px;
+          border-radius: 5px;
+          outline: none;
+          &:focus {
+            border: 1.5px solid var(--mainColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+.wraper.change-password-popup {
+  .full-input-change {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    label {
+      text-align: left;
+      font-family: apis;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: capitalize;
+      color: var(--mainColor);
+      margin-bottom: 5px;
+    }
+    input {
+      outline: none;
+      border: 2px solid #aaa;
+      border-radius: 5px;
+      padding: 5px;
+      &:focus {
+        border: 2px solid var(--mainColor);
+      }
+      &:focus::placeholder {
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .submit {
+    text-align: right;
+    .btn {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .user-data {
+    flex-direction: column;
+    .data {
+      width: 100% !important;
+    }
+  }
+}

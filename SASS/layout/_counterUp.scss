@@ -1,0 +1,31 @@
+.counterUp {
+  position: relative;
+  padding: 50px 0;
+  margin: 20px 0;
+  transform: translateY(-20px);
+  .layout {
+    @include layout(#333);
+  }
+  .box {
+    color: #fff;
+    border: 1.5px dotted #fff;
+    padding: 35px 0;
+    margin: 30px 0;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    i {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+    .counter {
+      font-size: 45px;
+    }
+    .counter-text {
+      font-size: 19px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+  }
+}

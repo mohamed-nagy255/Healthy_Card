@@ -1,0 +1,72 @@
+.full-input-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: capitalize;
+  user-select: none;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    &:checked ~ .checkmark {
+      background-color: var(--mainColor) !important;
+      box-shadow: 0 0 5px var(--mainColor);
+    }
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    border: 0.1px solid rgba(207, 207, 207, 0.7);
+    background-color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+  &:hover input ~ .checkmark {
+    background-color: #eee;
+  }
+}
+.checked-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.reservations {
+  .full-input-check.hide {
+    animation: animationDelete 0.3s ease 0.4s 1 forwards;
+  }
+}
+
+@keyframes animationDelete {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

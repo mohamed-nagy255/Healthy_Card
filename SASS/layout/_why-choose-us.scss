@@ -1,0 +1,42 @@
+.why-choose-us {
+    .info-ser {
+        header {
+            font-size: 40px;
+            font-weight: bold;
+            font-family: "Sansita Swashed", cursive;
+            margin: 0.8rem auto;
+            span {
+                color:  var(--mainColor);
+            }
+        }
+        p {
+            color: #666;
+            line-height: 2;
+            font-size: 1.2rem;
+        }
+        .achievements {
+            line-height: 2;
+            font-size: 1.3rem;
+            ul {
+                li {
+                    color: #666;
+                    i {
+                        color:  var(--mainColor);
+                        margin-right: 0.5rem;
+                        font-size: 15px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    .slider-images  {
+        img {
+            height: 26rem;
+        }
+    }
+}

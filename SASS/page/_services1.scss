@@ -1,0 +1,207 @@
+.services {
+  .services-border {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--boxShadow);
+    margin-bottom: 20px;
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: capitalize;
+      padding: 15px;
+      position: relative;
+      letter-spacing: 2px;
+      border-bottom: 1px solid var(--boxShadow);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 40px;
+        background-color: var(--mainColor);
+      }
+    }
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px 0 20px;
+      border: none;
+      li {
+        width: 100%;
+        margin: 5px;
+        button {
+          text-align: left;
+          border: 2px solid var(--mainColor);
+          color: var(--mainColor);
+          border-radius: 5px;
+          background-color: #fff;
+          width: 100%;
+          text-transform: capitalize;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          i {
+            margin-right: 10px;
+            transition: all 0.3s ease;
+          }
+          &:hover i {
+            transform: translateX(50%);
+          }
+          &:hover {
+            color: #fff;
+            background-color: var(--mainColor);
+          }
+        }
+        button.active {
+          background-color: var(--mainColor);
+          color: #fff;
+        }
+        .link-profile {
+          display: block;
+          border: 2px solid var(--mainColor);
+          background-color: #fff;
+          color: var(--mainColor);
+          text-align: center;
+          padding: 5px;
+          text-transform: capitalize;
+          border-radius: 5px;
+          font-size: 18px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          &:hover {
+            color: #fff;
+            background-color: var(--mainColor);
+          }
+        }
+      }
+    }
+    .tab-content {
+      .services-item {
+        width: 99%;
+        // employee
+        .control-patient {
+          .edit,
+          .delete {
+            width: 100%;
+            margin: 2px 0;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            padding: 2px 0;
+            text-transform: capitalize;
+            color: #fff;
+            box-shadow: none;
+          }
+          .edit {
+            background-color: var(--mainColor);
+          }
+          .delete {
+            background-color: #ff214f;
+          }
+          .checked-area {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        // medicines
+        .medicines {
+          margin: 10px 0;
+          width: 100%;
+          .medicines-item {
+            border: 1px solid #ccc;
+            padding: 15px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            .add-medicines {
+              display: block;
+              text-align: right;
+              margin-top: 15px;
+              .add {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.wraper.delete-popup {
+  .popup {
+    width: 30vw;
+    .popup-details {
+      .control-delete {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .yes,
+        .no {
+          padding: 5px 10px;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          text-transform: capitalize;
+          transition: all 0.3s ease;
+          padding: 5px;
+          width: 100px;
+        }
+        .yes {
+          background-color: var(--mainColor);
+          color: #fff;
+        }
+        .no {
+          background-color: #ccc;
+          color: #777;
+        }
+      }
+    }
+  }
+}
+
+.wraper.edit-patient,
+.wraper.add-patient {
+  .popup-details {
+    padding: 10px 15px;
+    .full-input {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 15px;
+      label {
+        color: var(--mainColor);
+        text-transform: capitalize;
+        font-family: apis;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      input {
+        width: 100%;
+        border: 1.5px solid #aaa;
+        border-radius: 5px;
+        padding: 5px;
+        outline: none;
+        &:focus {
+          border: 1.5px solid var(--mainColor) !important;
+        }
+        &:focus::placeholder {
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    .checked-area {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}

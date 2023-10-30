@@ -1,0 +1,13 @@
+.splide__slide {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  list-style-type: none !important;
+  margin: 0;
+  outline: none;
+  position: relative;
+}
+.splide__slide img {
+  vertical-align: bottom;
+}/*# sourceMappingURL=slide.css.map */

@@ -1,0 +1,64 @@
+#btn-goToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: #fff;
+  background-color: var(--mainColor);
+  padding: 5px 7px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  box-shadow: 0 0 5px var(--boxShadow);
+  z-index: 999;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+#btn-goToTop.active {
+  display: block;
+}
+
+.btn {
+  background-color: var(--mainColor);
+  color: #fff !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    @include layout(rgba(0, 0, 0, 0.066));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+}
+
+.submit,
+.delete-all {
+  display: block;
+  text-align: right;
+  margin-top: 25px;
+
+  .btn {
+    width: fit-content;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: none;
+    background-color: var(--mainColor) !important;
+  }
+
+  .delete {
+    color: #fff;
+    background-color: #ff214f !important;
+  }
+}

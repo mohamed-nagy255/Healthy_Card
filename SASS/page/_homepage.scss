@@ -1,0 +1,218 @@
+.main-page {
+  margin-top: 600px;
+  padding: 3.5rem auto;
+  .services {
+    background-image: url("../IMAGE/home-services.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    .layout {
+      @include layout(rgba(0, 0, 0, 0.345));
+    }
+    .container {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      header {
+        color: #fff;
+        padding-top: 100px;
+      }
+      p {
+        margin: auto;
+        color: #fff;
+        margin-top: 30px;
+        max-width: 600px;
+      }
+      .services-links {
+        padding: 50px 0;
+        text-align: center;
+        a {
+          padding: 10px 20px;
+          border: 2.5px solid var(--mainColor);
+          border-radius: 5px;
+          background-color: var(--mainColor);
+          text-transform: capitalize;
+          font-weight: 600;
+          font-size: 20px;
+          transition: all 0.3s ease;
+          margin: 10px;
+          width: 250px;
+          color: #fff;
+          &:hover {
+            color: var(--mainColor);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .doctors {
+    .slider-person {
+      background-color: var(--mainColor);
+      padding: 10px 0;
+      .splide-meet {
+        padding: 0 20px;
+        .container {
+          .splide__track {
+            .splide__list {
+              .splide__slide {
+                cursor: pointer;
+                text-transform: capitalize;
+                font-family: Roboto, sans-serif;
+                margin: 5px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                .title-slide {
+                  color: #fff;
+                  font-size: 1.4rem;
+                  font-weight: 600;
+                }
+                .parg-slide {
+                  font-size: 1.25rem;
+                  color: #fff;
+                  opacity: 0.7;
+                  line-height: 1;
+                  text-transform: capitalize;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    overflow: hidden;
+    .splide-client {
+      position: relative;
+      margin-bottom: 5rem;
+      .container {
+        .splide__track {
+          .splide__slide {
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 9rem;
+            .header-client {
+              img {
+                height: 8rem;
+                width: 8rem;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0 0.3rem 0.35rem #c3c3c3;
+              }
+              .title {
+                text-transform: capitalize;
+                font-size: 1.7rem;
+                color: var(--mainGreen);
+                font-weight: 500;
+                margin: 0.5rem 0;
+              }
+              .rating {
+                i {
+                  color: #fd4;
+                  text-shadow: 0 0 1px #952;
+                }
+              }
+            }
+            .parg-client {
+              font-size: 1.5rem;
+              margin-top: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .splide__pagination__page {
+      background-color: #fff;
+      border: 0.005rem solid #000;
+      &:active {
+        background-color: #000;
+      }
+    }
+  }
+  .contact {
+    padding: 25px 0;
+    background-color: var(--mainColor);
+    .contact-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      .title {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      span {
+        color: #fff;
+        font-size: 22px;
+        text-transform: capitalize;
+        margin: 10px 20px;
+      }
+      a {
+        border: 2px solid #fff;
+        background-color: #fff;
+        color: var(--mainColor);
+        padding: 7px 30px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.wraper.scanner {
+  .popup {
+    .popup-details {
+      padding: 2%;
+      @include centerContent;
+      max-height: 90vh;
+      button {
+        background-color: var(--mainColor);
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 5px;
+      }
+
+      #reader__dashboard_section_swaplink {
+        display: none !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-page {
+    .why-choose-us {
+      .info-ser {
+        header {
+          font-size: 11vw;
+        }
+
+        .achievements {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

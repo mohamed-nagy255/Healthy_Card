@@ -1,0 +1,443 @@
+// .services {
+//   margin-bottom: 50px;
+//   .services-border {
+//     padding: 10px;
+//     border-radius: 5px;
+//     box-shadow: 0 0 5px var(--boxShadow);
+//     .title {
+//       font-size: 18px;
+//       font-weight: 500;
+//       text-transform: capitalize;
+//       padding: 15px;
+//       position: relative;
+//       letter-spacing: 2px;
+//       border-bottom: 1px solid var(--boxShadow);
+//       &::before {
+//         content: "";
+//         position: absolute;
+//         top: 50%;
+//         left: -5px;
+//         transform: translateY(-50%);
+//         width: 5px;
+//         height: 40px;
+//         background-color: var(--mainColor);
+//       }
+//     }
+//     .services-content {
+//       padding: 10px;
+//       .links {
+//         .row {
+//           border: 0.5px solid transparent;
+//           margin: 10px 0;
+//           cursor: pointer;
+//           .link {
+//             margin-top: 10px;
+//             border-radius: 5px;
+//             padding: 10px;
+//             color: var(--mainColor);
+//             border: 2px solid var(--mainColor);
+//             text-transform: capitalize;
+//             i {
+//               margin-right: 10px;
+//               transition: all 0.3s ease;
+//             }
+//             &:hover i {
+//               transform: translateX(60%);
+//             }
+//           }
+//           .link.active {
+//             background-color: var(--mainColor);
+//             color: #fff;
+//           }
+//         }
+//       }
+//       .services-item {
+//         .qr {
+//           text-align: center;
+//           img {
+//             border: 1px solid var(--boxShadow);
+//             width: 100%;
+//             max-width: 250px;
+//           }
+//         }
+//         .input {
+//           .full-input-ser {
+//             width: 100%;
+//             @include centerContent;
+//             align-items: flex-start;
+//             flex-direction: column;
+//             margin-top: 15px;
+//             label {
+//               color: var(--mainColor);
+//               font-size: 18px;
+//               font-weight: 500;
+//               letter-spacing: 2px;
+//               text-transform: capitalize;
+//               margin: 0 0 0 5px;
+//             }
+//             input {
+//               width: 100%;
+//               padding: 5px;
+//               border-radius: 5px;
+//               border: 1.8px solid rgba(0, 0, 0, 0.199);
+//               outline: none;
+//               &:focus {
+//                 border: 1.8px solid var(--mainColor);
+//               }
+//               &:focus::placeholder {
+//                 opacity: 0;
+//                 transition: all 0.3s ease;
+//               }
+//             }
+//           }
+//         }
+//         .full-input-ser {
+//           width: 49%;
+//           display: inline-block;
+//           margin-top: 15px;
+//           label {
+//             color: var(--mainColor);
+//             font-size: 18px;
+//             font-weight: 500;
+//             letter-spacing: 2px;
+//             text-transform: capitalize;
+//             margin: 0 0 0 5px;
+//             display: block;
+//           }
+//           input {
+//             width: 100%;
+//             padding: 5px;
+//             border-radius: 5px;
+//             border: 1.8px solid rgba(0, 0, 0, 0.199);
+//             outline: none;
+//             &:focus {
+//               border: 1.8px solid var(--mainColor);
+//             }
+//             &:focus::placeholder {
+//               opacity: 0;
+//               transition: all 0.3s ease;
+//             }
+//           }
+//           .checked-area {
+//             display: flex;
+//             justify-content: space-around;
+//             align-items: center;
+//           }
+//         }
+
+//         .full-select {
+//           display: block;
+//           width: 100%;
+//           label {
+//             color: var(--mainColor);
+//             font-size: 18px;
+//             font-weight: 500;
+//             letter-spacing: 2px;
+//             text-transform: capitalize;
+//             margin: 0 0 5px 5px;
+//           }
+//           input {
+//             border: none;
+//           }
+//         }
+//         .full-input-ser.description {
+//           display: block !important;
+//           width: 100%;
+//         }
+//         .full-select {
+//           margin-top: 10px;
+//           select {
+//             width: 100%;
+//           }
+//         }
+//         .full-input-ser.show-data {
+//           border: 1px solid #ccc;
+//           padding: 5px;
+//           border-radius: 5px;
+//         }
+
+//         .submit {
+//           display: block;
+//           text-align: right;
+//           margin-top: 25px;
+//           .btn {
+//             width: fit-content;
+//             padding: 5px 25px;
+//             text-transform: uppercase;
+//             letter-spacing: 2px;
+//           }
+//         }
+
+//         // employee
+//         .form-search {
+//           width: 100%;
+//           padding: 5px;
+//           border: 2px solid var(--boxShadow);
+//           outline: none;
+//           border-radius: 5px;
+//           &:focus {
+//             border: 1.8px solid var(--mainColor);
+//           }
+//           &:focus::placeholder {
+//             opacity: 0;
+//             transition: all 0.3s ease;
+//           }
+//         }
+//         .table-employee {
+//           width: 100%;
+//           overflow: auto;
+//           max-height: 500px;
+//           .table.employee {
+//             text-align: center;
+//             width: 930px;
+//             margin-top: 20px;
+//             tr {
+//               th {
+//                 text-transform: capitalize;
+//               }
+//               td {
+//                 .control {
+//                   display: flex;
+//                   justify-content: space-evenly;
+//                   align-items: baseline;
+//                   .delete {
+//                     background-color: #ff214f;
+//                     text-transform: capitalize;
+//                     padding: 2px 5px;
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+
+//         .control-patient {
+//           .edit,
+//           .delete {
+//             width: 100%;
+//             margin: 2px 0;
+//             border: none;
+//             outline: none;
+//             border-radius: 2px;
+//             padding: 2px 0;
+//             text-transform: capitalize;
+//             color: #fff;
+//             box-shadow: none;
+//           }
+//           .edit {
+//             background-color: var(--mainColor);
+//           }
+//           .delete {
+//             background-color: #ff214f;
+//           }
+//         }
+//         .control-add-patient {
+//           text-align: right;
+//           margin-top: 20px;
+//           .btn-add-patient {
+//             text-transform: uppercase;
+//             letter-spacing: 2px;
+//             box-shadow: none;
+//           }
+//         }
+
+//         // medicines
+//         .medicines {
+//           margin: 10px 0;
+//           width: 100%;
+//           .table-medicines {
+//             width: 100%;
+//             max-height: 500px;
+//             overflow: auto;
+//             .table.medicines {
+//               text-align: center;
+//               width: 820px;
+//               th {
+//                 text-transform: capitalize;
+//               }
+//             }
+//             .btn.delete {
+//               background-color: #ff214f;
+//               text-transform: capitalize;
+//             }
+//           }
+//           .medicines-item {
+//             border: 1px solid #ccc;
+//             padding: 15px 10px;
+//             border-radius: 5px;
+//             margin-top: 10px;
+//             .medicines-content {
+//               margin-top: 10px;
+//               label {
+//                 font-size: 18px;
+//                 font-family: apis;
+//                 font-weight: 600;
+//                 color: var(--mainColor);
+//                 text-transform: capitalize;
+//               }
+//               input {
+//                 display: block;
+//                 width: 100%;
+//                 padding: 5px;
+//                 border: 1.5px solid #aaa;
+//                 border-radius: 5px;
+//                 outline: none;
+//                 &:focus {
+//                   border: 1.5px solid var(--mainColor);
+//                 }
+//                 &:focus::placeholder {
+//                   opacity: 0;
+//                   transition: all 0.3s ease;
+//                 }
+//               }
+//             }
+//             .add-medicines {
+//               display: block;
+//               text-align: right;
+//               margin-top: 15px;
+//               .add {
+//                 text-transform: uppercase;
+//                 letter-spacing: 2px;
+//               }
+//             }
+//           }
+//         }
+
+//         .table-pharmacist {
+//           margin-top: 15px;
+//           width: 100%;
+//           max-height: 500px;
+//           overflow: auto;
+//           .table.entering-medicines {
+//             text-align: center;
+//             width: 820px;
+//             th {
+//               text-transform: capitalize;
+//             }
+//             .btn.delete {
+//               background-color: #ff214f;
+//               text-transform: capitalize;
+//             }
+//           }
+//         }
+//         .full-textarea {
+//           width: 100%;
+//           label {
+//             font-size: 18px;
+//             font-family: apis;
+//             font-weight: 600;
+//             color: var(--mainColor);
+//             text-transform: capitalize;
+//             margin-bottom: 10px;
+//           }
+//           textarea {
+//             width: 100%;
+//             padding: 10px;
+//             display: block;
+//             border-radius: 5px;
+//             border: 1.5px solid #aaa;
+//             outline: none;
+//             &:focus {
+//               border: 1.5px solid var(--mainColor);
+//             }
+//             &:focus::placeholder {
+//               opacity: 0;
+//               transition: all 0.3s ease;
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .services-content.patient {
+//       .links {
+//         .link {
+//           width: 100% !important;
+//         }
+//       }
+//     }
+//   }
+// }
+// .choices__list--multiple .choices__item {
+//   background-color: var(--mainColor) !important;
+// }
+
+// // popups
+
+// .wraper.delete-popup {
+//   .popup {
+//     width: 30vw;
+//     .popup-details {
+//       .control-delete {
+//         display: flex;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         .yes,
+//         .no {
+//           padding: 5px 10px;
+//           outline: none;
+//           border: none;
+//           border-radius: 5px;
+//           text-transform: capitalize;
+//           transition: all 0.3s ease;
+//           padding: 5px;
+//           width: 100px;
+//         }
+//         .yes {
+//           background-color: var(--mainColor);
+//           color: #fff;
+//         }
+//         .no {
+//           background-color: #ccc;
+//           color: #777;
+//         }
+//       }
+//     }
+//   }
+// }
+// .wraper.edit-patient,
+// .wraper.add-patient {
+//   .popup-details {
+//     padding: 10px 15px;
+//     .full-input {
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: flex-start;
+//       flex-direction: column;
+//       margin-bottom: 15px;
+//       label {
+//         color: var(--mainColor);
+//         text-transform: capitalize;
+//         font-family: apis;
+//         font-weight: 600;
+//         margin-bottom: 5px;
+//         font-size: 18px;
+//       }
+//       input {
+//         width: 100%;
+//         border: 1.5px solid #aaa;
+//         border-radius: 5px;
+//         padding: 5px;
+//         outline: none;
+//         &:focus {
+//           border: 1.5px solid var(--mainColor) !important;
+//         }
+//         &:focus::placeholder {
+//           opacity: 0;
+//           transition: all 0.3s ease;
+//         }
+//       }
+//     }
+//     .checked-area {
+//       display: flex;
+//       justify-content: space-evenly;
+//       align-items: center;
+//     }
+//   }
+// }
+// @media screen and (max-width: 991px) {
+//   .services .services-item .full-input-ser {
+//     width: 100% !important;
+//     display: block !important;
+//   }
+// }

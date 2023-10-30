@@ -1,0 +1,27 @@
+.table-border {
+  width: 100%;
+  overflow: auto;
+  max-height: 500px;
+  .table {
+    text-align: center;
+    width: 930px !important;
+    margin-top: 20px;
+    tr {
+      th {
+        text-transform: capitalize;
+      }
+      td {
+        .control {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: baseline;
+          .delete {
+            background-color: #ff214f !important;
+            text-transform: capitalize;
+            padding: 2px 5px;
+          }
+        }
+      }
+    }
+  }
+}
